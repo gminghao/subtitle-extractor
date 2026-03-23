@@ -132,10 +132,14 @@ export default function Page() {
   const canExport = Boolean(data && displayText);
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white text-slate-900">
-      <div className="mx-auto max-w-3xl px-4 py-10">
-        <header className="mb-8">
-          <h1 className="text-2xl font-semibold tracking-tight">YouTube 字幕提取与下载</h1>
+    <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white text-slate-900 flex items-center justify-center">
+      <div className="w-full mx-auto max-w-3xl px-4 py-10">
+        <header className="mb-8 text-center">
+          <h1 className="text-3xl font-extrabold tracking-tight">
+            <span className="bg-gradient-to-r from-slate-900 to-slate-600 bg-clip-text text-transparent">
+              YouTube 字幕提取与下载
+            </span>
+          </h1>
           <p className="mt-2 text-sm text-slate-600">输入视频链接，选择输出格式，即可复制或下载字幕。</p>
         </header>
 
@@ -147,7 +151,7 @@ export default function Page() {
                 value={videoUrl}
                 onChange={(e) => setVideoUrl(e.target.value)}
                 placeholder="https://www.youtube.com/watch?v=..."
-                className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20"
+                className="mt-2 w-full rounded-2xl border-2 border-slate-200 bg-white px-5 py-4 text-base text-slate-900 shadow-sm outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/20"
               />
             </div>
 
